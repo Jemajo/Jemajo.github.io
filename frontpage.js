@@ -58,11 +58,10 @@ let myMapControl = L.control.layers ({
     "Orthofoto":ortho_m_beschr,
     
 },
-{  // "basemap.at Overlay":myLayers.bmapoverlay,
+{  // Unterm Strich Platzhalter
 },
 {
     collapsed: false
-// <Control.Layers options> options? 
 });
 
 //DOCLINK für collapse: http://leafletjs.com/reference-1.3.0.html#control-layers-collapsed
