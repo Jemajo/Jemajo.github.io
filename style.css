@@ -112,6 +112,7 @@ a.list, a:visited{
     text-decoration: none;
 }
 #footer{
+    text-align: center;
     width: 90%;
     margin: auto;
     color: grey;
