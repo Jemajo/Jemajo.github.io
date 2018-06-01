@@ -83,3 +83,15 @@ L.control.scale({
         imperial: false, //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-imperial
         position: "bottomleft" //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-position
 }).addTo(myMap);
+
+
+let gpxTrack = new L.GPX ("AdlerwegEtappe12.gpx", {
+    async: true,
+});
+gpxTrack.on ("loaded", function (evt) {
+    let track = evt.target;
+    myMap.fitBounds(track.getBounds());
+}).addTo(myMap);
+
+
+
