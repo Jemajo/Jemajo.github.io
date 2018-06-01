@@ -10,7 +10,7 @@ function LogIn(){
     window.location="https://jemajo.github.io/frontpage";
     }
     if (loggedin==false) {
-    alert("Invalid login!");
+    alert("Sorry, du bist noch nicht bereit für deinen Aufenthalt in Innsbruck.");
     }
     }
 
