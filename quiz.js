@@ -7,10 +7,10 @@ function LogIn(){
     if 
     (password=="piefke") { 
     loggedin=true;
-    window.location="https://jemajo.github.io/";
+    window.location="https://jemajo.github.io/frontpage";
     }
     if (loggedin==false) {
-    alert("Invalid login!");
+    alert("Sorry, du bist noch nicht bereit für deinen Aufenthalt in Innsbruck.");
     }
     }
 
