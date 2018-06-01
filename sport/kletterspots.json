@@ -1,0 +1,29 @@
+{
+    "kletterspots": [
+        {
+            "lat":"47.282304",
+            "lng":"11.394418",
+            "name": "Höttinger Steinbruch",
+            "topolink":"https://www.climbers-paradise.com/sportklettern-innsbruck-tirol/location/hoettinger-steinbruch/"
+        },
+        {
+            "lat":"47.312001",
+            "lng":"11.376287",
+            "name":"Kletterarena-Seegrube",
+            "topolink":"https://www.climbers-paradise.com/sportklettern-innsbruck-tirol/location/nordkette-kletterarena-seegrube-sportklettern/"
+        
+        },
+        {
+            "lat":"47.270672",
+            "lng":"11.342189",
+            "name":"Kranebitter Steinbruch",
+            "topolink":"http://www.klettertopo.de/Routendatenbank.php?L_ID=2&G_ID=146&F_ID=5256&Start_Ausgabe_Fels=0"
+        },
+        {
+            "lat":"47.278491",
+            "lng":"11.256032",
+            "name":"Ehnbachklamm",
+            "topolink":"https://www.climbers-paradise.com/sportklettern-innsbruck-tirol/location/ehnbachklamm/"
+        }
+    ]
+}

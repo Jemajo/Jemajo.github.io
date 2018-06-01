@@ -12,7 +12,7 @@ body{
     font-size: 4.5em; 
     color: yellow;
     background-position: center;
-    background-image: url("/images/hs.jpg");
+    background-image: url("../images/hs.jpg");
     border: yellow;
 }
 #topnav{
