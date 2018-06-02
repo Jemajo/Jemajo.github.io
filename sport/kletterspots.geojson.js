@@ -1,7 +1,5 @@
-const kletterspots = {
-    
-"type":"FeatureCollection",
-"totalFeatures":4,
+const kletterspots = 
+{
     "features":[{
 
     "geometry":{

@@ -1,5 +1,8 @@
 {
-    "kletterspots": [
+    "kletterspots": [{
+        "type": "FeatureCollection",
+        "totalFeatures":4},
+    
         {
             "lat":"47.282304",
             "lng":"11.394418",
@@ -25,5 +28,5 @@
             "name":"Ehnbachklamm",
             "topolink":"https://www.climbers-paradise.com/sportklettern-innsbruck-tirol/location/ehnbachklamm/"
         }
-    ]
+        ]
 }
