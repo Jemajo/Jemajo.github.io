@@ -147,5 +147,5 @@ L.marker(ehnbachklamm);
 let ebk = L.marker(ehnbachklamm
    ,{icon: L.icon({iconUrl: "../icons/climbing1.png",iconAnchor: [16, 37]})}
 ).addTo(climbingSpots)
-ebk.bindPopup("<h3>Kletterspot Kranebitter Steinbruch</h3><p><a href='http://www.klettertopo.de/Routendatenbank.php?L_ID=2&G_ID=146&F_ID=5256&Start_Ausgabe_Fels=0'>Topo-Link</a></p>").addTo(myMap);
+ebk.bindPopup("<h3>Kletterspot Ehnbachklamm</h3><p><a href='https://www.climbers-paradise.com/sportklettern-innsbruck-tirol/location/ehnbachklamm/'>Topo-Link</a></p>").addTo(myMap);
 //ebk.addTo(myMapControl);
