@@ -134,7 +134,7 @@ let sg = L.marker(seegrube
 sg.bindPopup("<h3>Kletterarena Seegrube</h3><p><a href='https://www.climbers-paradise.com/sportklettern-innsbruck-tirol/location/nordkette-kletterarena-seegrube-sportklettern/'>Topo-Link</a></p>").addTo(myMap);
 //sg.addTo(myMapControl);
 
-const kranebitterSteinbruch = [47.270672, 11.342189];
+const kranebitterSteinbruch = [47.2708, 11.3397];
 L.marker(kranebitterSteinbruch);
 let ks = L.marker(kranebitterSteinbruch
    ,{icon: L.icon({iconUrl: "../icons/climbing1.png",iconAnchor: [16, 37]})}
