@@ -1,3 +1,4 @@
+// dieser File ist jetzt nicht mehr notwendig, wurde durch accmarker.js mit anderer Dateistruktur ersetzt. Kann gelöscht werden, wenn niemand was dagegen hat (Marlene)
 const accommodations = {
  "features": [
      {

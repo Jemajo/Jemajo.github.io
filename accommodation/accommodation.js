@@ -5,7 +5,7 @@ let myMap = L.map("mapdiv", {
         position: 'topleft'
     }
 });
-
+let markerLayer = L.featureGroup();
 //DOClink: 1.3.0.html#map-l-map
 let myLayers= {
     osm: L.tileLayer (
@@ -56,7 +56,9 @@ let myMapControl = L.control.layers ({
     //<Object> baselayers?
     "Karte" :myLayers.osm,
     "Orthofoto":ortho_m_beschr,
-    
+},
+{   
+   "Übernachtungsmöglichkeiten" : markerLayer,
 },
 {  // Unterm Strich Platzhalter
 },
@@ -81,11 +83,18 @@ L.control.scale({
         maxWidth: 200, //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-maxwidth
         metric: true, //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-metric
         imperial: false, //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-imperial
-        position: "bottomrleft" //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-position
+        position: "bottomleft" //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-position
 }).addTo(myMap);
 
+for (let macc of accommodations) {
+    L.marker([macc.lat, macc.lng])
+      .bindPopup(`<h1>${macc.name}</h1>
+        <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
+      .addTo(markerLayer);
+    }
 
-let javascript = L.javascript(accommodations).addTo(myMap);
+
+//let javascript = L.javascript(accommodations).addTo(myMap);
     //geojson.bindPopup(function(layer) {
     //  const props = layer.feature.properties;
     //const popupText = `<h1>${props.NAME}</h1>`;
