@@ -6,7 +6,7 @@ let myMap = L.map("mapdiv", {
     }
 });
 const myIcon = L.icon({
-    iconUrl : '../icons/accommodation.png',
+    iconUrl : '../icons/poi.png',
 });
 
 //DOClink: 1.3.0.html#map-l-map
@@ -88,12 +88,12 @@ L.control.scale({
 
 //const macc = L.featureGroup();
 
-for (let macc of accommodations) {
+for (let macc of pois) {
     L.marker([macc.lat, macc.lng],{
        icon: myIcon,
     }
 ).bindPopup(`<h1>${macc.name}</h1>
-        <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
+        <p> Was ist das? </br> ${macc.what} </br> </br> ${macc.adresse}</p>`)
       .addTo(myMap);
     }
 
@@ -105,5 +105,5 @@ for (let macc of accommodations) {
     //return popupText;
     //});
 
-myMap.fitBounds(macc.getBounds());
+//myMap.fitBounds(macc.getBounds());
 
