@@ -6,6 +6,9 @@ let myMap = L.map("mapdiv", {
     }
 });
 let markerLayer = L.featureGroup();
+const myIcon = L.icon({
+    iconUrl : '../icons/accommodation.png',
+});
 //DOClink: 1.3.0.html#map-l-map
 let myLayers= {
     osm: L.tileLayer (
@@ -57,9 +60,6 @@ let myMapControl = L.control.layers ({
     "Karte" :myLayers.osm,
     "Orthofoto":ortho_m_beschr,
 },
-{   
-   "Übernachtungsmöglichkeiten" : markerLayer,
-},
 {  // Unterm Strich Platzhalter
 },
 {
@@ -87,10 +87,13 @@ L.control.scale({
 }).addTo(myMap);
 
 for (let macc of accommodations) {
-    L.marker([macc.lat, macc.lng])
+    L.marker([macc.lat, macc.lng],{
+       icon: myIcon,
+    }
+)
       .bindPopup(`<h1>${macc.name}</h1>
         <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
-      .addTo(markerLayer);
+      .addTo(myMap);
     }
 
 
