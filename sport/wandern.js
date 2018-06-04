@@ -4,7 +4,7 @@ let myMap = L.map("mapdiv", {
         position: 'topleft'
     }
 });
-let overlayElevation = L.featureGroup().addTo(myMap);
+
 //DOClink: 1.3.0.html#map-l-map
 let myLayers= {
     osm: L.tileLayer (
@@ -109,13 +109,14 @@ let hoehenProfil = L.control.elevation({
   yTicks: undefined, //number of ticks on y axis, calculated by default according to height
   collapsed: true,  //collapsed mode, show chart on click or mouseover
   imperial: false    //display imperial units instead of metric
-});
-
-hoehenProfil.addTo(myMap);
+}).addTo(myMap);
 
 gpxTrack.on("addline",function(evt){
-    hoehenProfil.addData(evt.line);
-})
+   hoehenProfil.addData(evt.line);
+});
+gpxTrack.addTo(myMap); 
+
+hoehenProfil.clear();
 /*L.geoJson(geojson,{
     onEachFeature: hoehenProfil.addData.bind(hoehenProfil) //working on a better solution
 }).addTo(myMap);
