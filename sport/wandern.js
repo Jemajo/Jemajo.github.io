@@ -1,4 +1,3 @@
-// Rahmen für die Karte 
 let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
@@ -46,7 +45,6 @@ let ortho_m_beschr = L.featureGroup (
 );
 
 
-// Layer zur Karte hinzufügen - zusammenbauen 
 myMap.addLayer(myLayers.osm);
 
 //DOCLINK: http://leafletjs.com/reference-1.3.0.html#map-addlayer
@@ -91,7 +89,8 @@ let gpxTrack = new L.GPX ("AdlerwegEtappe12.gpx", {
 gpxTrack.on ("loaded", function (evt) {
     let track = evt.target;
     myMap.fitBounds(track.getBounds());
-}).addTo(myMap);
+}).addTo(myMap); 
+
 
 
 
