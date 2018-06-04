@@ -1,4 +1,3 @@
-// fehlt: fit Bounds to markerGroup
 let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
@@ -60,8 +59,8 @@ let myMapControl = L.control.layers ({
     "Karte" :myLayers.osm,
     "Orthofoto":ortho_m_beschr,
 },
-{  // Unterm Strich Platzhalter
-    "Übernachtungsmöglichkeiten":accommodationLayer
+{  
+    "Übernachtungsmöglichkeiten":accommodationLayer,
 },
 {
     collapsed: false
@@ -94,8 +93,8 @@ myMap.addLayer(accommodationLayer);
 for (const macc of accommodations) {
     L.marker([macc.lat, macc.lng],{
        icon: myIcon,
-       iconAnchor: [16,32],
-       popupAnchor: [0,-32]
+       iconAnchor : [16, 0],
+      // popupAnchor : 
     }
 ).bindPopup(`<h1>${macc.name}</h1>
         <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)

@@ -1,4 +1,3 @@
-// fehlt: fit Bounds to markerGroup
 let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
@@ -8,7 +7,7 @@ let myMap = L.map("mapdiv", {
 const myIcon = L.icon({
     iconUrl : '../icons/poi.png',
 });
-
+let kulturLayer = L.featureGroup();
 //DOClink: 1.3.0.html#map-l-map
 let myLayers= {
     osm: L.tileLayer (
@@ -60,7 +59,8 @@ let myMapControl = L.control.layers ({
     "Karte" :myLayers.osm,
     "Orthofoto":ortho_m_beschr,
 },
-{  // Unterm Strich Platzhalter
+{  
+    "Kulturelle Sehenswürdigkeiten": kulturLayer,
 },
 {
     collapsed: false
@@ -88,13 +88,15 @@ L.control.scale({
 
 //const macc = L.featureGroup();
 
+myMap.addLayer(kulturLayer);
+
 for (let macc of pois) {
     L.marker([macc.lat, macc.lng],{
        icon: myIcon,
     }
 ).bindPopup(`<h1>${macc.name}</h1>
         <p> Was ist das? </br> ${macc.what} </br> </br> ${macc.adresse}</p>`)
-      .addTo(myMap);
+      .addTo(kulturLayer);
     }
 
 
@@ -105,5 +107,5 @@ for (let macc of pois) {
     //return popupText;
     //});
 
-//myMap.fitBounds(macc.getBounds());
+myMap.fitBounds(kulturLayer.getBounds());
 
