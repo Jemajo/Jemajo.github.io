@@ -1,5 +1,3 @@
-
-
 // Rahmen für die Karte 
 let myMap = L.map("mapclimbing", {
     fullscreenControl: true,
@@ -7,7 +5,7 @@ let myMap = L.map("mapclimbing", {
         position: 'topleft'
     }
 });
-let climbingSpots = L.featureGroup();
+let climbingLayer = L.featureGroup();
 
 let myLayers = {
     osm: L.tileLayer(
@@ -53,10 +51,10 @@ let myMapControl = L.control.layers({
     //<Object> baselayers?
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
-    
+
 
 }, { // Unterm Strich Platzhalter
-  "Kletterspots": climbingSpots
+    "Kletterspots": climbingLayer
 }, {
     collapsed: false
 });
@@ -70,10 +68,22 @@ L.control.scale({
     position: "bottomleft"
 }).addTo(myMap);
 
+const myIcon = L.icon({
+    iconUrl : '../icons/climbing.png',
+});
+myMap.addLayer(climbingLayer);
+for (const ks of kletterspots) {
+    L.marker([ks.lat, ks.lng], {
+        iconUrl: myIcon,
+    }).bindPopup(`<h1>${ks.name}</h1>
+        <p>${ks.topolink}</br>${ks.Infos}</p>`).addTo(climbingLayer);
+}
+myMap.fitBounds(climbingLayer.getBounds());
 
 
 
 
+/*
 
 async function ladeGeojsonLayer(kletterspots){
     const response = await fetch(kletterspots.feature);
@@ -112,7 +122,7 @@ let geojsonObjekt_klettern = L.geoJSON(kletterspots,{ // in den .js datensatz kl
     )
     }
 });
-/*const markerKletterspots = L.geoJSON(kletterspots,{
+const markerKletterspots = L.geoJSON(kletterspots,{
     onEachFeature: function(feature, layer){
         let latlng = feature.geometry.coordinates[0];
         console.log(latlng);
@@ -125,7 +135,7 @@ let geojsonObjekt_klettern = L.geoJSON(kletterspots,{ // in den .js datensatz kl
         })
     }
 })
-*/
+
 
 //L.geoJSON(geojsonObjekt_klettern).addTo(myMap);
 //myMap.addLayer(geojsonObjekt_klettern);
@@ -138,7 +148,7 @@ let geojsonObjekt_klettern = L.geoJSON(kletterspots,{ // in den .js datensatz kl
 
 
 
-/*
+
 //marker für kletterspots
 const hoettingerSteinbruch = [47.282304, 11.394418];
 L.marker(hoettingerSteinbruch);
