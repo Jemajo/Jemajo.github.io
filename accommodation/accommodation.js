@@ -8,7 +8,7 @@ let myMap = L.map("mapdiv", {
 const myIcon = L.icon({
     iconUrl : '../icons/accommodation.png',
 });
-
+let accommodationLayer = L.featureGroup();
 //DOClink: 1.3.0.html#map-l-map
 let myLayers= {
     osm: L.tileLayer (
@@ -61,6 +61,7 @@ let myMapControl = L.control.layers ({
     "Orthofoto":ortho_m_beschr,
 },
 {  // Unterm Strich Platzhalter
+    "Übernachtungsmöglichkeiten":accommodationLayer
 },
 {
     collapsed: false
@@ -74,7 +75,7 @@ myMap.addControl (myMapControl);
 
 
 // Zentrum der Karte setzen 
-myMap.setView([47.267,11.383],11)
+//myMap.setView([47.267,11.383],11)
 //DOKLINK: http://leafletjs.com/reference-1.3.0.html#map-setview
 
 // Doclink Scale: http://leafletjs.com/reference-1.3.0.html#control-scale-l-control-scale
@@ -86,15 +87,19 @@ L.control.scale({
         position: "bottomleft" //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-position
 }).addTo(myMap);
 
-//const macc = L.featureGroup();
+//let macc = L.featureGroup();
 
-for (let macc of accommodations) {
+myMap.addLayer(accommodationLayer);
+
+for (const macc of accommodations) {
     L.marker([macc.lat, macc.lng],{
        icon: myIcon,
+       iconAnchor: [16,32],
+       popupAnchor: [0,-32]
     }
 ).bindPopup(`<h1>${macc.name}</h1>
         <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
-      .addTo(myMap);
+      .addTo(accommodationLayer);
     }
 
 
@@ -105,5 +110,5 @@ for (let macc of accommodations) {
     //return popupText;
     //});
 
-myMap.fitBounds(macc.getBounds());
+myMap.fitBounds(accommodationLayer.getBounds());
 
