@@ -3,7 +3,6 @@ body{
     margin: auto;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #063E53; 
-    background-color: #D1C5B7;
 }
 
 #headerfront {
@@ -55,7 +54,7 @@ body{
     overflow: hidden;
     display: block;
     position: relative;
-    background-color: #735D41;
+    background-color: #063E53;
     color: #D1C5B7;
 
 }
