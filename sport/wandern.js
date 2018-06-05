@@ -38,6 +38,7 @@ let myLayers= {
         }
     )
 };
+myMap.addLayer(myLayers.osm); 
 
 let ortho_m_beschr = L.featureGroup (
     [myLayers.bmaporthofoto30cm,
@@ -53,7 +54,7 @@ let myMapControl = L.control.layers ({
     "Orthofoto":ortho_m_beschr,
     
 },
-{  // Unterm Strich Platzhalter
+{ 
 },
 {
     collapsed: false
@@ -61,13 +62,10 @@ let myMapControl = L.control.layers ({
 
 //DOCLINK für collapse: http://leafletjs.com/reference-1.3.0.html#control-layers-collapsed
 
-myMap.addControl (myMapControl);
+myMap.addControl(myMapControl);
 
 //DOCLINK: http://leafletjs.com/reference-1.3.0.html#map-addcontrol
 
-
-// Zentrum der Karte setzen 
-myMap.setView([47.267,11.383],11)
 //DOKLINK: http://leafletjs.com/reference-1.3.0.html#map-setview
 
 // Doclink Scale: http://leafletjs.com/reference-1.3.0.html#control-scale-l-control-scale
@@ -116,10 +114,11 @@ gpxTrack.on("addline",function(evt){
 });
 gpxTrack.addTo(myMap); 
 
-hoehenProfil.clear();
+//hoehenProfil.clear();
 /*L.geoJson(geojson,{
     onEachFeature: hoehenProfil.addData.bind(hoehenProfil) //working on a better solution
 }).addTo(myMap);
 */
-
+// Zentrum der Karte setzen 
+myMap.setView([47.267,11.383],11)
 
