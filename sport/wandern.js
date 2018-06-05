@@ -95,6 +95,7 @@ let gpxTrack = new L.GPX ("AdlerwegEtappe12.gpx", {
 });
 
 gpxTrack.on ("loaded", function (evt) {
+//    {style: function (feature) {return {color: "#b40000"}};
     let track = evt.target;
     myMap.fitBounds(track.getBounds());
 }).addTo(myMap); 

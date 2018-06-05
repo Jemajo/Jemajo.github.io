@@ -6,6 +6,7 @@ let myMap = L.map("mapdiv", {
 });
 const myIcon = L.icon({
     iconUrl : '../icons/poi.png',
+    iconAnchor : [15, 35],
 });
 let kulturLayer = L.featureGroup();
 //DOClink: 1.3.0.html#map-l-map

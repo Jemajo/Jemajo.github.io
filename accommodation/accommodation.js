@@ -6,6 +6,7 @@ let myMap = L.map("mapdiv", {
 });
 const myIcon = L.icon({
     iconUrl : '../icons/accommodation.png',
+    iconAnchor : [15, 35],
 });
 let accommodationLayer = L.featureGroup();
 //DOClink: 1.3.0.html#map-l-map
@@ -93,8 +94,6 @@ myMap.addLayer(accommodationLayer);
 for (const macc of accommodations) {
     L.marker([macc.lat, macc.lng],{
        icon: myIcon,
-       iconAnchor : [16, 0],
-      // popupAnchor : 
     }
 ).bindPopup(`<h1>${macc.name}</h1>
         <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
