@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="js\leaflet\leaflet.css"/>
     <script src="js\leaflet\leaflet.js"></script>
 
+    <!-- Test Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <!-- Plugins -->
     <link rel="stylesheet" href="./js/leaflet.fullscreen/leaflet.fullscreen.css" />
     <script src="./js/leaflet.fullscreen/Leaflet.fullscreen.js"></script>
@@ -29,9 +35,9 @@
 
 <body>
     <div id="headerfront">
-        <h1>Herzlich Willkommen</h1>
+        <h1>Endecke dein Innsbruck</h1>
     </div>
-
+<!--
     <div id="topnav">
 
         <a href="an_abreise/an_abreise.html">An- und Abreise</a>
@@ -42,7 +48,80 @@
         <a href="https://www.zamg.ac.at/cms/de/wetter/wetter-oesterreich">Wetter</a>
     
     </div>
+-->
 
+<!-- Test Bootstrap -->
+<div id="uberblick">
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="./images/klettern.jpg" alt="Bild Klettern">
+          <div class="card-body">
+            <h5 class="card-title"><a href="sport/klettern.html"> Klettern </a></h5>
+            <p class="card-text">Hier direkt die nächsten Kletterspots rund um Innsbruck auschecken.</p>
+            <p class="card-text"><small class="text-muted">Climb now. Work later.</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="./images/kultur.jpg" alt="Bild Kultur">
+          <div class="card-body">
+            <h5 class="card-title"><a href="kultur/kultur.html">Kulturelle Angebote</a></h5>
+            <p class="card-text">Hier findest du Museen und interessante Orte in Innsbruck.</p>
+            <p class="card-text"><small class="text-muted">Geheimtipp: Audioversum!</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="./images/transport.jpg" alt="Straßenbahn Innsbruck">
+          <div class="card-body">
+            <h5 class="card-title"><a href="an_abreise/an_abreise.html"> An- und Abreise </a></h5>
+            <p class="card-text"> Bahn fahren oder doch lieber mit dem Flixbus? </p>
+            <p class="card-text"><small class="text-muted">Nutzt die Öffis! ;)</small></p>
+          </div>
+        </div>
+      </div>
+
+    </br>
+
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="./images/wandern.jpg" alt="Bild Karwendel">
+          <div class="card-body">
+            <h5 class="card-title"><a href="sport/wandern.html">Wandern</a></h5>
+            <p class="card-text">Hier findest du einen Abschnitt des Adlerweges. </p>
+            <p class="card-text"><small class="text-muted">Wandern verlängert das Leben. </small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="./images/essen.jpg" alt="Bild Kultur">
+          <div class="card-body">
+            <h5 class="card-title"><a href="eat/eat.html">Hungrig?</a></h5>
+            <p class="card-text">Schau hier, wo es die besten Leckereien in Innsbruck gibt.</p>
+            <p class="card-text"><small class="text-muted">Ham ham ham. </small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="./images/accommodation.jpg" alt="Bild aus Innsbruck">
+          <div class="card-body">
+            <h5 class="card-title"><a href="accommodation/accommodation.html"> Deine Übernachtungsmöglichkeiten</a></h5>
+            <p class="card-text">Camping, Couchsurfing oder doch lieber ein Hotel?</p>
+            <p class="card-text"><small class="text-muted"> Gute Nacht! </small></p>
+          </div>
+        </div>
+      </div>
+</div>
+    </br>
+<!--
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="./images/wetter.jpg" alt="Bild Blitze">
+          <div class="card-body">
+            <h5 class="card-title"><a href="https://www.zamg.ac.at/cms/de/wetter/wetter-oesterreich">Wetter</a></h5>
+            <p class="card-text">Checke hier das Wetter für die nächsten Tage </p>
+            <p class="card-text"><small class="text-muted">Hier geht's zur Seite vom ZAMG. </small></p>
+          </div>
+        </div>
+      </div>
+
+<!--
 <div class="article">
 
     </br>
@@ -60,11 +139,11 @@
     </div>
 
 </div>
-
+-->
     <div id="footer">
         <hr>
-        <h3>Impressum</h3>
-        <h4>Autoren</h4>
+        <h4>Impressum</h4>
+        <h5>Autoren</h5>
         <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> - 
         <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> - 
         <a href="mailto:jessica.balling@student.uibk.ac.at">Jessica Balling</a>
