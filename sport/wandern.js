@@ -4,7 +4,7 @@ let myMap = L.map("mapdiv", {
         position: 'topleft'
     }
 });
-
+let etappeGroup = L.featureGroup(); 
 //DOClink: 1.3.0.html#map-l-map
 let myLayers= {
     osm: L.tileLayer (
@@ -55,6 +55,7 @@ let myMapControl = L.control.layers ({
     
 },
 { 
+    "Start- & Endpunkt der Tour" : etappeGroup,
 },
 {
     collapsed: false
@@ -76,6 +77,17 @@ L.control.scale({
         imperial: false, //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-imperial
         position: "bottomleft" //DOCLINK: http://leafletjs.com/reference-1.3.0.html#control-scale-position
 }).addTo(myMap);
+
+
+myMap.addLayer(etappeGroup);
+const start = [47.35467730, 11.47713480];
+const finish = [47.27091590, 11.39537570];
+
+L.marker(start, {icon: L.icon({iconUrl: '../icons/start.png', iconAnchor: [15, 35],}) 
+}).addTo(etappeGroup).bindPopup("<p>Startpunkt</p><a href='https://de.wikipedia.org/wiki/St._Anton_am_Arlberg'>Wikipedia Link</a>"); 
+
+L.marker(finish, {icon: L.icon({iconUrl: '../icons/finish.png', iconAnchor: [15, 35],}) 
+}).addTo(etappeGroup).bindPopup("<p>Endpunkt</p><a href='https://de.wikipedia.org/wiki/Steeg_(Tirol)'>Wikipedia Link</a>");
 
 let gpxTrack = new L.GPX ("AdlerwegEtappe12.gpx", {
     async: true,
