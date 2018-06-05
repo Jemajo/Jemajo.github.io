@@ -6,13 +6,35 @@ body{
     background-color: #D1C5B7;
 }
 
-#header{
+#headerfront {
     height: 500px;
     padding: 30px;
     text-align: center;
     font-size: 3.0em; 
     color:#D1C5B7;
     background-image: url("images/tirol.jpg");
+    font-family: 'Pacifico', cursive;
+}
+
+#headerkultur {
+    height: 500px;
+    padding: 30px;
+    text-align: right;
+    font-size: 3.0em; 
+    color:#D1C5B7;
+    background-image: url("images/kultur.jpg");
+    font-family: 'Pacifico', cursive;
+
+}
+
+#header {
+    height: 500px;
+    padding: 30px;
+    text-align: right;
+    font-size: 3.0em; 
+    color:#D1C5B7;
+    background-image: url("images/kultur.jpg");
+    font-family: 'Pacifico', cursive;
 
 }
 
