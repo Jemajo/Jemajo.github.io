@@ -1,3 +1,4 @@
+// noch machen: Farbe von Linie auf diese Ändern:     color: "#b40000",
 let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
@@ -80,8 +81,8 @@ L.control.scale({
 
 
 myMap.addLayer(etappeGroup);
-const start = [47.35467730, 11.47713480];
-const finish = [47.27091590, 11.39537570];
+const start = [47.27091590, 11.39537570];
+const finish = [47.35467730, 11.47713480];
 
 L.marker(start, {icon: L.icon({iconUrl: '../icons/start.png', iconAnchor: [15, 35],}) 
 }).addTo(etappeGroup).bindPopup("<p>Startpunkt</p><a href='https://de.wikipedia.org/wiki/St._Anton_am_Arlberg'>Wikipedia Link</a>"); 
@@ -92,6 +93,7 @@ L.marker(finish, {icon: L.icon({iconUrl: '../icons/finish.png', iconAnchor: [15,
 let gpxTrack = new L.GPX ("AdlerwegEtappe12.gpx", {
     async: true,
 });
+
 gpxTrack.on ("loaded", function (evt) {
     let track = evt.target;
     myMap.fitBounds(track.getBounds());
