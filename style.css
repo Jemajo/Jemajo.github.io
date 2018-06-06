@@ -1,8 +1,8 @@
 body{
     max-width: 85%;
     margin: auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #063E53; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    color: #063E53;
 }
 
 #headerfront {
@@ -14,9 +14,8 @@ body{
     font-family: 'Pacifico', cursive;
 }
 #ueberblick { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 #headerkultur {
@@ -29,6 +28,16 @@ body{
     font-family: 'Pacifico', cursive;
 }
 
+#headeraccommodation {
+    height: 500px;
+    padding: 30px;
+    text-align: right;
+    font-size: 3.0em; 
+    color:#D1C5B7;
+    background-image: url("images/accommodation.jpg");
+    font-family: 'Pacifico', cursive;
+}
+
 #headerklettern {
     height: 500px;
     padding: 30px;
@@ -36,6 +45,26 @@ body{
     font-size: 3.0em; 
     color:#D1C5B7;
     background-image: url("images/klettern.jpg");
+    font-family: 'Pacifico', cursive;
+}
+
+#headertransport {
+    height: 500px;
+    padding: 30px;
+    text-align: left;
+    font-size: 3.0em; 
+    color:#D1C5B7;
+    background-image: url("images/transport.jpg");
+    font-family: 'Pacifico', cursive;
+}
+
+#headeressen {
+    height: 500px;
+    padding: 30px;
+    text-align: left;
+    font-size: 3.0em; 
+    color:#D1C5B7;
+    background-image: url("images/essen.jpg");
     font-family: 'Pacifico', cursive;
 }
 
@@ -61,7 +90,7 @@ body{
 #topnav a{
     float: left;
     display: block;
-    color: #063E53 ;
+    color: #D1C5B7 ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -132,6 +161,7 @@ body{
 .article {
     margin: auto;
     width: 90%;
+    color: #063E53;
 }
 #author{
     text-align: left;
@@ -151,7 +181,7 @@ body{
 #mapclimbing {
     width: 80%;
     height: 660px;
-    border: 1px solid gray;
+    border: 3px solid #063E53;
 }
 
 a.list, a:visited{
