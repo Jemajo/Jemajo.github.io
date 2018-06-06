@@ -13,11 +13,7 @@ body{
     color:#063E53;
     font-family: 'Pacifico', cursive;
 }
-#ueberblick { 
-    margin-left: auto;
-    margin-right: auto;
 
-}
 #headerkultur {
     height: 500px;
     padding: 30px;
@@ -76,7 +72,6 @@ body{
     color:#D1C5B7;
     background-image: url("images/kultur.jpg");
     font-family: 'Pacifico', cursive;
-
 }
 
 #topnav{
