@@ -6,7 +6,9 @@ let myMap = L.map("mapclimbing", {
     }
 });
 let climbingLayer = L.featureGroup();
-
+const myIcon = L.icon({
+    iconUrl :"../icons/climbing.png",
+});
 let myLayers = {
     osm: L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -67,9 +69,7 @@ L.control.scale({
     position: "bottomleft"
 }).addTo(myMap);
 
-const myIcon = L.icon({
-    iconUrl : '../icons/climbing1.png',
-});
+
 myMap.addLayer(climbingLayer);
 for (const ks of kletterspots) {
     L.marker([ks.lat, ks.lng], {
