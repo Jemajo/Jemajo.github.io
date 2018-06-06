@@ -5,10 +5,10 @@ let myMap = L.map("mapdiv", {
     }
 });
 const myIcon = L.icon({
-    iconUrl: '../icons/poi.png',
+    iconUrl: '../icons/transport.png',
     iconAnchor: [15, 35],
 });
-let kulturLayer = L.featureGroup();
+let reiseLayer = L.featureGroup();
 
 let myLayers = {
     osm: L.tileLayer(
@@ -56,7 +56,7 @@ let myMapControl = L.control.layers({
     "Orthofoto": ortho_m_beschr,
 },
     {
-        "Kulturelle Sehenswürdigkeiten": kulturLayer,
+        "Transportpunkte": reiseLayer,
     },
     {
         collapsed: false
@@ -75,15 +75,15 @@ L.control.scale({
     position: "bottomleft"
 }).addTo(myMap);
 
-myMap.addLayer(kulturLayer);
+myMap.addLayer(reiseLayer);
 
-for (let macc of pois) {
+for (let macc of reise) {
     L.marker([macc.lat, macc.lng], {
         icon: myIcon,
     }
     ).bindPopup(`<h1>${macc.name}</h1>
-        <p> Was ist das? </br> ${macc.what} </br> </br> ${macc.adresse}</p>`)
-        .addTo(kulturLayer);
+        <p> ${macc.what} </br> </br> ${macc.adresse}</p>`)
+        .addTo(reiseLayer);
 }
-myMap.fitBounds(kulturLayer.getBounds());
+myMap.fitBounds(reiseLayer.getBounds());
 
