@@ -13,11 +13,12 @@ body{
     color:#063E53;
     font-family: 'Pacifico', cursive;
 }
-#ueberblick { 
-    margin-left: auto;
-    margin-right: auto;
-
+.card-group {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
+
 #headerkultur {
     height: 500px;
     padding: 30px;
