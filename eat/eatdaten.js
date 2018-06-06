@@ -1,5 +1,5 @@
 const eatdaten=[{
-    "lat":"47.266463","lng":"11.384141","name":"Alia's","Art":"Falafel-Bistro","Internetseite":"<a href=http://alias.business.site/>Internetseite</a>","Öffnungszeiten":"<ul><li>montag:11.30-15.00 & 17.00-20.00</li><li>dienstag:11.30-15.00</li><li>mittwoch:11.30-15.00 & 17.00-20.00</li><li>donnerstag:11.30-15.00 & 17.00-20.00</li><li>freitag:11.30-15.00 & 17.00-20.00</li><li>samstag:11.30-15.00</li></ul>","Infos":"<p>Die Besten Falafel der Stadt!</p>"
+    "lat":"47.266463","lng":"11.384141","name":"Alia's","Art":"Falafel-Bistro","Internetseite":"<a href=http://alias.business.site/>Internetseite</a>","Öffnungszeiten":"<h3>Öffnungszeiten:</h3><ul><li>montag:11.30-15.00 & 17.00-20.00</li><li>dienstag:11.30-15.00</li><li>mittwoch:11.30-15.00 & 17.00-20.00</li><li>donnerstag:11.30-15.00 & 17.00-20.00</li><li>freitag:11.30-15.00 & 17.00-20.00</li><li>samstag:11.30-15.00</li></ul>","Infos":"<p>Die Besten Falafel der Stadt!</p>"
 },{
     "lat":"47.267775","lng":"11.396384","name":"Treibhaus","Art":"#","Internetseite":"","Öffnungszeiten":"#","Infos":"#"
 },{
@@ -19,6 +19,6 @@ const eatdaten=[{
 },{
     "lat":"47.268941","lng":"11.404886","name":"Die Bäckerei","Art":"Kulturbackstube","Internetseite":"","Öffnungszeiten":"#","Infos":"#"
 },{
-    "lat":"#","lng":"#","name":"#","Art":"#","Internetseite":"","Öffnungszeiten":"#","Infos":"#"
+    "lat":"47.263154","lng":"11.398662","name":"Celi's Impro-Bistro","Art":"Zauberküche","Internetseite":"#","Öffnungszeiten":"Geheim","Infos":"#"
 }]
 

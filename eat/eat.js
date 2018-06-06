@@ -3,7 +3,10 @@ let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
         position: 'topleft'
-    }
+    }});
+let eatingspot=L.featureGroup();
+const myIcon=L.icon({
+    iconUrl:"../icons/eat.png"
 });
 let myLayers= {
     osm: L.tileLayer (
@@ -48,6 +51,7 @@ let myMapControl = L.control.layers ({
     "Orthofoto":ortho_m_beschr,
     
 },{  // Unterm Strich Platzhalter
+    "Hungrig?":eatingspot
 },{
     collapsed: false
 });
@@ -60,3 +64,11 @@ L.control.scale({
         imperial: false, 
         position: "bottomleft" 
 }).addTo(myMap);
+myMap.addLayer(eatingspot);
+for(const es of eatdaten){
+    L.marker([es.lat,es.lng],{
+        iconUrl:myIcon
+    }).bindPopup(`<h1>${es.name}</h1>
+    <p>${es.Art}</p></br><p>${es.Internetseite}</p></br><p>${es.Öffnungszeiten}</p></br><p>${es.Infos}</p>`).addTo(eatingspot); 
+}
+myMap.fitBounds(eatingspot.getBounds());

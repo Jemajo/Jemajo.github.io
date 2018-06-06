@@ -177,7 +177,7 @@ body{
     width: 90%;
     height: 660px;
     border: 3px solid #063E53;
-    position: relative;
+    position: auto;
 }
 #mapclimbing {
     width: 80%;
