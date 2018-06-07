@@ -73,7 +73,7 @@ L.control.scale({
 myMap.addLayer(climbingLayer);
 for (const ks of kletterspots) {
     L.marker([ks.lat, ks.lng], {
-        iconUrl: myIcon,
+        icon: myIcon,
     }).bindPopup(`<h1>${ks.name}</h1>
         <p>${ks.topolink}</br>${ks.Infos}</p>`).addTo(climbingLayer);
 }
