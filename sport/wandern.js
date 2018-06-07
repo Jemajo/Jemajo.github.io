@@ -82,7 +82,7 @@ gpxTrack12.on ("loaded", function (evt) {
 
 let hoehenProfil12 = L.control.elevation({
     position: "topright",
-  theme: "lime-theme", //default: lime-theme
+  theme: "steelblue-theme", //default: lime-theme
   width: 600,
   height: 125,
   margins: {
@@ -112,6 +112,9 @@ gpxTrack12.addTo(myMap);
 // Etappe 13
 let gpxTrack13 = new L.GPX ("AdlerwegEtappe13.gpx", {
     async: true,
+    track_options: {
+        color: "#b40000"
+    }
 });
 
 gpxTrack13.on ("loaded", function (evt) {
@@ -121,8 +124,7 @@ gpxTrack13.on ("loaded", function (evt) {
 
 let hoehenProfil = L.control.elevation({
     position: "topright",
-  theme: "lime-theme", //default: lime-theme
-  width: 600,
+  theme: "steelblue-theme",
   height: 125,
   margins: {
       top: 10,
