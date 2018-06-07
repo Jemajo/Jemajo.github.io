@@ -19,6 +19,8 @@ const eatdaten=[{
 },{
     "lat":"47.268941","lng":"11.404886","name":"Die Bäckerei","Art":"Kulturbackstube","Internetseite":"","Öffnungszeiten":"#","Infos":"#"
 },{
-    "lat":"47.263154","lng":"11.398662","name":"Celi's Impro-Bistro","Art":"Zauberküche","Internetseite":"#","Öffnungszeiten":"Geheim","Infos":"#"
+    "lat":"47.263154","lng":"11.398662","name":"Celi's Impro-Bistro","Art":"Zauberküche","Öffnungszeiten":"Geheim","Infos":"Regelmäßig wird Sonntag Abends ein kleines Fest gefeiert..."
+},{
+    "lat":"47.264121","lng":"11.395240","name":"Crocodilles Pizza","Art":"Pizzeria & Lieferservice","Internetseite":"<a href=http://www.pizza-crocodiles.at/>Crocodilles Website</a>","Öffnungszeiten":"<h2>Öffnungszeiten</h2><p>montag bis samstag: 11-23 Uhr</p>","Infos":"Montag ist Schontag - Zwischen 20 und 23 Uhr lad das Crocodilles herzlichst zu günstigen Pizzaabenden ein.(nur gültig bei zwei Bestellungen aus der Karte)"
 }]
 
