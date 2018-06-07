@@ -4,10 +4,13 @@ let myMap = L.map("mapdiv", {
         position: 'topleft'
     }
 });
+
+//Marker-Icon festlegen
 const myIcon = L.icon({
     iconUrl: '../icons/accommodation.png',
     iconAnchor: [15, 35],
 });
+//Layers definieren
 let accommodationLayer = L.featureGroup();
 let myLayers = {
     osm: L.tileLayer(
@@ -34,12 +37,15 @@ let myLayers = {
             attribution: "Datenquellen: <a href='https://www.basemap.at'>basemap.at</a>"
         })
 };
+
+// Gruppierung
 let ortho_m_beschr = L.featureGroup(
     [myLayers.bmaporthofoto30cm,
     myLayers.tiris_nomenklatur]);
 
 myMap.addLayer(myLayers.osm);
 
+// Kontrolle hinzufügen
 let myMapControl = L.control.layers({
 
     "Karte": myLayers.osm,
