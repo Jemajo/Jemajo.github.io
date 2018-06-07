@@ -4,10 +4,13 @@ let myMap = L.map("mapdiv", {
         position: 'topleft'
     }
 });
+
+//Marker-Icon festlegen
 const myIcon = L.icon({
     iconUrl: '../icons/accommodation.png',
     iconAnchor: [15, 35],
 });
+//Layers definieren
 let accommodationLayer = L.featureGroup();
 let myLayers = {
     osm: L.tileLayer(
@@ -20,7 +23,7 @@ let myLayers = {
         "https://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png",
         {
             subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-            attribution: "Datenquelle: <a href='https://www.basemap.at'>basemap.at</a>" //Zeigt Datenquelle rechts unten an 
+            attribution: "Datenquelle: <a href='https://www.basemap.at'>basemap.at</a>"
         }),
     tiris_nomenklatur: L.tileLayer(
         "http://wmts.kartetirol.at/wmts/gdi_nomenklatur/GoogleMapsCompatible/{z}/{x}/{y}.png8", {
@@ -31,16 +34,20 @@ let myLayers = {
         "https://{s}.wien.gv.at/basemap/bmaporthofoto30cm/normal/google3857/{z}/{y}/{x}.jpeg",
         {
             subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-            attribution: "Datenquellen: <a href='https://www.basemap.at'>basemap.at</a>" //Zeigt Datenquelle rechts unten an 
+            attribution: "Datenquellen: <a href='https://www.basemap.at'>basemap.at</a>"
         })
 };
+
+// Gruppierung
 let ortho_m_beschr = L.featureGroup(
     [myLayers.bmaporthofoto30cm,
     myLayers.tiris_nomenklatur]);
-// Layer zur Karte hinzufügen - zusammenbauen 
+
 myMap.addLayer(myLayers.osm);
+
+// Kontrolle hinzufügen
 let myMapControl = L.control.layers({
-    //<Object> baselayers?
+
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
 }, {
@@ -56,6 +63,7 @@ L.control.scale({
     position: "bottomleft"
 }).addTo(myMap);
 myMap.addLayer(accommodationLayer);
+
 for (const macc of accommodations) {
     L.marker([macc.lat, macc.lng], {
         icon: myIcon,
@@ -64,6 +72,5 @@ for (const macc of accommodations) {
         <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
         .addTo(accommodationLayer);
 }
-// Zentrum der Karte setzen 
 myMap.fitBounds(accommodationLayer.getBounds());
 

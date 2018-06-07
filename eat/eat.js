@@ -69,7 +69,7 @@ L.control.scale({
 myMap.addLayer(eatingspot);
 for (const es of eatdaten) {
     L.marker([es.lat, es.lng], {
-        iconUrl: myIcon
+        icon: myIcon,
     }).bindPopup(`<h1>${es.name}</h1>
     <p>${es.Art}</p></br><p>${es.Internetseite}</p></br><p>${es.Öffnungszeiten}</p></br><p>${es.Infos}</p>`).addTo(eatingspot);
 }

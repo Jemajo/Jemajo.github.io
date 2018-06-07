@@ -15,12 +15,9 @@ let myLayers = {
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
             subdomains: ["a", "b", "c"],
-
             attribution: "Datenquelle: <a href='https://www.openstreetmap.org'>openstreetmap.org</a>"
-
         }
     ),
-
     bmapoverlay: L.tileLayer(
         "https://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png",
         {

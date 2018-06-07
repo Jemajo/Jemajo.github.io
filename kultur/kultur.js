@@ -3,11 +3,13 @@ let myMap = L.map("mapdiv", {
     fullscreenControlOptions: {
         position: 'topleft'
     }
-});
+}
+);
 const myIcon = L.icon({
     iconUrl: '../icons/poi.png',
     iconAnchor: [15, 35],
-});
+}
+);
 let kulturLayer = L.featureGroup();
 
 let myLayers = {
@@ -20,7 +22,6 @@ let myLayers = {
 
         }
     ),
-
     bmapoverlay: L.tileLayer(
         "https://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png",
         {
@@ -42,16 +43,13 @@ let myLayers = {
         }
     )
 };
-
 let ortho_m_beschr = L.featureGroup(
     [myLayers.bmaporthofoto30cm,
     myLayers.tiris_nomenklatur]
 );
-
 myMap.addLayer(myLayers.osm);
 
 let myMapControl = L.control.layers({
-
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
 },
@@ -64,9 +62,7 @@ let myMapControl = L.control.layers({
 
 myMap.addControl(myMapControl);
 
-
 myMap.setView([47.267, 11.383], 11)
-
 
 L.control.scale({
     maxWidth: 200,
