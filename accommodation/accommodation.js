@@ -20,7 +20,7 @@ let myLayers = {
         "https://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png",
         {
             subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-            attribution: "Datenquelle: <a href='https://www.basemap.at'>basemap.at</a>" //Zeigt Datenquelle rechts unten an 
+            attribution: "Datenquelle: <a href='https://www.basemap.at'>basemap.at</a>"
         }),
     tiris_nomenklatur: L.tileLayer(
         "http://wmts.kartetirol.at/wmts/gdi_nomenklatur/GoogleMapsCompatible/{z}/{x}/{y}.png8", {
@@ -31,7 +31,7 @@ let myLayers = {
         "https://{s}.wien.gv.at/basemap/bmaporthofoto30cm/normal/google3857/{z}/{y}/{x}.jpeg",
         {
             subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-            attribution: "Datenquellen: <a href='https://www.basemap.at'>basemap.at</a>" //Zeigt Datenquelle rechts unten an 
+            attribution: "Datenquellen: <a href='https://www.basemap.at'>basemap.at</a>"
         })
 };
 let ortho_m_beschr = L.featureGroup(
@@ -66,6 +66,5 @@ for (const macc of accommodations) {
         <p>${macc.adresse} </br>${macc.webpage} </br>${macc.phone}</p>`)
         .addTo(accommodationLayer);
 }
-// Zentrum der Karte setzen 
 myMap.fitBounds(accommodationLayer.getBounds());
 

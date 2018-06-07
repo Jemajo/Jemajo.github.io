@@ -54,7 +54,7 @@ let myMapControl = L.control.layers({
     "Orthofoto": ortho_m_beschr,
 
 
-}, { // Unterm Strich Platzhalter
+}, { 
     "Kletterspots": climbingLayer
 }, {
     collapsed: false,
