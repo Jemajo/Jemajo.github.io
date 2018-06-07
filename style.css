@@ -129,8 +129,8 @@ body{
     margin-top: auto;
 }
 .dropbutton{
-    background-color: #735D41;
-    color: #D1C5B7;
+    background-color: rgb(255, 149, 0);
+    color: rgb(0, 0, 0);
     padding : 14px 16px; 
     font-size : 12px;
     border: none;
@@ -142,14 +142,14 @@ body{
 .dropdown-content{
     display : none;
     position : absolute;
-    background-color: #735D41;
+    background-color:coral;
     min-width: 160px; 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 .dropdown-content a{
-    color : #D1C5B7;
-    padding: 12px 16px;
+    color : black;
+    padding: 8px 16px;
     text-decoration: none;
     display: block;
 }
@@ -157,7 +157,7 @@ body{
     display: block;
 }
 .dropdown:hover .dropbutton{
-    background-color: #735D41;
+    background-color: rgb(20, 136, 82);
 }
 .article {
     margin: auto;
