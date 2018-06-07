@@ -7,7 +7,7 @@ let myMap = L.map("mapdiv", {
 });
 let eatingspot = L.featureGroup();
 const myIcon = L.icon({
-    iconUrl: "../icons/eat.png",
+    iconUrl: '../icons/eat.png',
     iconAnchor: [16, 32]
 });
 let myLayers = {
