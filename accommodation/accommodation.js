@@ -37,10 +37,11 @@ let myLayers = {
 let ortho_m_beschr = L.featureGroup(
     [myLayers.bmaporthofoto30cm,
     myLayers.tiris_nomenklatur]);
-// Layer zur Karte hinzufügen - zusammenbauen 
+
 myMap.addLayer(myLayers.osm);
+
 let myMapControl = L.control.layers({
-    //<Object> baselayers?
+
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
 }, {
@@ -56,6 +57,7 @@ L.control.scale({
     position: "bottomleft"
 }).addTo(myMap);
 myMap.addLayer(accommodationLayer);
+
 for (const macc of accommodations) {
     L.marker([macc.lat, macc.lng], {
         icon: myIcon,
