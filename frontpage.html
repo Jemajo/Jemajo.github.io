@@ -2,43 +2,48 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-
-    <script defer src="frontpage.js"></script>
-
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
 
 
-    <link rel="stylesheet" href="js\leaflet\leaflet.css"/>
-    <script src="js\leaflet\leaflet.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- Google Font Cookie -->
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
 
-    <!-- Test Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!-- Plugins -->
-    <link rel="stylesheet" href="./js/leaflet.fullscreen/leaflet.fullscreen.css" />
-    <script src="./js/leaflet.fullscreen/Leaflet.fullscreen.js"></script>
+  <script defer src="frontpage.js"></script>
+  <link rel="shortcut icon" href="icons/steinbock.png" type="image/png" />
+  <link rel="icon" href="icons/steinbock.png" type="image/png" />
+  <link rel="stylesheet" href="style.css"/>
 
 
-    <title>Enjoy Innsbruck</title>
-    <!--Icon für Seite hinzufügen-->
+  <link rel="stylesheet" href="js\leaflet\leaflet.css" />
+  <script src="js\leaflet\leaflet.js"></script>
+
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="./js/leaflet.fullscreen/leaflet.fullscreen.css" />
+  <script src="./js/leaflet.fullscreen/Leaflet.fullscreen.js"></script>
+
+
+  <title>Enjoy Innsbruck</title>
+  <!--Icon für Seite hinzufügen-->
 </head>
 
 <body>
     <div class="uberblick">
     <div id="headerfront">
         <h1>Endecke dein Innsbruck</h1>
-    </div>
-<!--
+      </div>
+      <!--
     <div id="topnav">
 
         <a href="an_abreise/an_abreise.html">An- und Abreise</a>
@@ -59,54 +64,78 @@
         <div class="card">
           <img class="card-img-top" src="./images/klettern.jpg" alt="Bild Klettern">
           <div class="card-body">
-            <h5 class="card-title"><a href="sport/klettern.html"> Klettern </a></h5>
+            <h5 class="card-title">
+              <a href="sport/klettern.html"> Klettern </a>
+            </h5>
             <p class="card-text">Hier direkt die nächsten Kletterspots rund um Innsbruck auschecken.</p>
-            <p class="card-text"><small class="text-muted">Climb now. Work later.</small></p>
+            <p class="card-text">
+              <small class="text-muted">Climb now. Work later.</small>
+            </p>
           </div>
         </div>
         <div class="card">
           <img class="card-img-top" src="./images/kultur.jpg" alt="Bild Kultur">
           <div class="card-body">
-            <h5 class="card-title"><a href="kultur/kultur.html">Kulturelle Angebote</a></h5>
+            <h5 class="card-title">
+              <a href="kultur/kultur.html">Kulturelle Angebote</a>
+            </h5>
             <p class="card-text">Hier findest du Museen und interessante Orte in Innsbruck.</p>
-            <p class="card-text"><small class="text-muted">Geheimtipp: Audioversum!</small></p>
+            <p class="card-text">
+              <small class="text-muted">Geheimtipp: Audioversum!</small>
+            </p>
           </div>
         </div>
         <div class="card">
           <img class="card-img-top" src="./images/transport.jpg" alt="Straßenbahn Innsbruck">
           <div class="card-body">
-            <h5 class="card-title"><a href="an_abreise/an_abreise.html"> An- und Abreise </a></h5>
+            <h5 class="card-title">
+              <a href="an_abreise/an_abreise.html"> An- und Abreise </a>
+            </h5>
             <p class="card-text"> Bahn fahren oder doch lieber mit dem Flixbus? </p>
-            <p class="card-text"><small class="text-muted">Nutzt die Öffis! ;)</small></p>
+            <p class="card-text">
+              <small class="text-muted">Nutzt die Öffis! ;)</small>
+            </p>
           </div>
         </div>
       </div>
 
-    </br>
+      
 
-    <div class="card-group">
+      <div class="card-group">
         <div class="card">
           <img class="card-img-top" src="./images/wandern.jpg" alt="Bild Karwendel">
           <div class="card-body">
-            <h5 class="card-title"><a href="sport/wandern.html">Wandern</a></h5>
+            <h5 class="card-title">
+              <a href="sport/wandern.html">Wandern</a>
+            </h5>
             <p class="card-text">Hier findest du einen Abschnitt des Adlerweges. </p>
-            <p class="card-text"><small class="text-muted">Wandern verlängert das Leben. </small></p>
+            <p class="card-text">
+              <small class="text-muted">Wandern verlängert das Leben. </small>
+            </p>
           </div>
         </div>
         <div class="card">
           <img class="card-img-top" src="./images/essen.jpg" alt="Bild Kultur">
           <div class="card-body">
-            <h5 class="card-title"><a href="eat/eat.html">Hungrig?</a></h5>
+            <h5 class="card-title">
+              <a href="eat/eat.html">Hungrig?</a>
+            </h5>
             <p class="card-text">Schau hier, wo es die besten Leckereien in Innsbruck gibt.</p>
-            <p class="card-text"><small class="text-muted">Ham ham ham. </small></p>
+            <p class="card-text">
+              <small class="text-muted">Ham ham ham. </small>
+            </p>
           </div>
         </div>
         <div class="card">
           <img class="card-img-top" src="./images/accommodation.jpg" alt="Bild aus Innsbruck">
           <div class="card-body">
-            <h5 class="card-title"><a href="accommodation/accommodation.html"> Deine Übernachtungsmöglichkeiten</a></h5>
+            <h5 class="card-title">
+              <a href="accommodation/accommodation.html"> Übernachtungsmöglichkeiten</a>
+            </h5>
             <p class="card-text">Camping, Couchsurfing oder doch lieber ein Hotel?</p>
-            <p class="card-text"><small class="text-muted"> Gute Nacht! </small></p>
+            <p class="card-text">
+              <small class="text-muted"> Gute Nacht! </small>
+            </p>
           </div>
         </div>
       </div>
@@ -114,7 +143,7 @@
   </div>
 </div>
     </br>
-<!--
+    <!--
     <div class="card-group">
         <div class="card">
           <img class="card-img-top" src="./images/wetter.jpg" alt="Bild Blitze">
@@ -126,7 +155,6 @@
         </div>
       </div>
 
-<!--
 <div class="article">
 
     </br>
@@ -145,19 +173,20 @@
 
 </div>
 -->
+<hr>
     <div id="footer">
-        <hr>
-        <h4>Impressum</h4>
-        <h5>Autoren</h5>
-        <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> - 
-        <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> - 
-        <a href="mailto:jessica.balling@student.uibk.ac.at">Jessica Balling</a>
+      <h4>Impressum</h4>
+      <h5>Autoren</h5>
+      <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> -
+      <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> -
+      <a href="mailto:jessica.balling@student.uibk.ac.at">Jessica Balling</a>
     </div>
 
-       <!-- <div id="author">
+    <!-- <div id="author">
         <p>Autor: jemajo organization</p> 
     </div>
 -->
+  </div>
 </body>
 
 </html>

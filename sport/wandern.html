@@ -9,21 +9,22 @@
 
 
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../js/leaflet/leaflet.css"/>
+    <link rel="stylesheet" href="../js/leaflet/leaflet.css" />
     <script src="../js/leaflet/leaflet.js"></script>
 
     <script defer src="wandern.js"></script>
     <script src='../js/leaflet.gpx/gpx.js'></script>
 
     <script src="../js/d3/d3.v3.min.js" charset="utf-8"></script>
-    <link rel= "stylesheet" href "../js/leaflet.elevation/leaflet.elevation-0.0.4.css" rel='stylesheet'/>
+    <link rel="stylesheet" href "../js/leaflet.elevation/leaflet.elevation-0.0.4.css" rel='stylesheet' />
     <link rel="stylesheet" href="../js/leaflet.elevation/leaflet.elevation-0.0.4.css" />
     <script src="../js/leaflet.elevation/leaflet.elevation-0.0.4.min.js"></script>
 
-    <link rel="stylesheet" href="../js/leaflet.fullscreen/leaflet.fullscreen.css" /> 
+    <link rel="stylesheet" href="../js/leaflet.fullscreen/leaflet.fullscreen.css" />
     <script src="../js/leaflet.fullscreen/Leaflet.fullscreen.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<!-- Google Font Cookie -->
+<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
 
 
 
@@ -35,24 +36,21 @@
 
     </div>
     <div id="topnav">
-
-        
-        <!--<a href="index.html">Startseite</a>
-        <a href="Reise-Infrastruktur.html">An-Abreise</a>
-        <a href="accommodation.html">Accommodation</a>
+        <a href="frontpage.html">Startseite</a>
+        <a href="Reise-Infrastruktur.html">ÖVPN</a>
+        <a href="accommodation.html">Übernachtung</a>
         <a href="eat.html">Hunger?</a>
         <a href="kultur.html">Kultur</a>-->
-        <a href="sport.html">Hauptseite Sportliche Aktivitäten</a>
-        
+        <a href="sport.html">Sport</a>
+
 
     </div>
     <div class="dropdown">
         <button class="dropbutton">Sportliche Aktivitäten</button>
-    <div class="dropdown-content">
-        <a href="#">Klettern</a>
-        <a href="#">Wandern</a>
-        <a href="#">Mountainbike</a>
-    </div>
+        <div class="dropdown-content">
+            <a href="#">Klettern</a>
+            <a href="#">Wandern</a>
+        </div>
     </div>
 
     <div id="topnav">
@@ -63,28 +61,51 @@
         <a href="kultur.html">Kultur</a>-->
     </div>
     <div class="article">
-</br>
-    <div id="mapdiv">
-    </div>
+        </br>
         </br>
         <div id="text">
-            <p>Dein Abschnitt auf dem Adlerweg direkt bei Innsbruck: du startest an der Haltestelle der Hungerbrug am Congress und fährst mit der Hungerburg- und der <a href = "https://www.nordkette.com" >Nordkettenbahn</a> von knapp 600m ü.A. auf 2269m ü.A.!!<br> Übrigens: die Haltestellen der Hungerburgbahn, entworfen von Star-Architektin Zaha Hadid in Anlehnung an die Form von Eiskappen, wurden im Dezember 2007 in Betrieb genommen.</p>
+            <p>Der Adlerweg ist ein Weitwanderweg durch Tirol. Die Etappen 12 und 13 befinden sich in nächster Nähe von Innsbruck.
+                Klicke auf die kleinen Symbole rechts oben auf der Karte, um die Höhenprofile der Touren zu sehen und um
+                abschätzen zu können, ob du das schaffst ;)
+                </br>
+                </br>
+                <b>Etappe 12</b> führt vom
+                <a href="http://www.hallerangerhaus.at/">Hallerangerhaus</a> über den herrlichen
+                <a href="https://de.wikipedia.org/wiki/Goetheweg_(Nordkette)">Goetheweg</a> sogar direkt in die Stadt. Den Abstieg von der Nordkette kannst du zu Fuß zurücklegen, oder
+                die
+                <a href="https://www.nordkette.com">Nordkettenbahn und Hungerburgbahn</a> von knapp 2269m ü.A. auf 600m ü.A.Stadthöhe nehmen. Das Ganze geht
+                natürlich auch andersrum!
+                <br> Übrigens: die Haltestellen der Hungerburgbahn, entworfen von Star-Architektin Zaha Hadid in Anlehnung an
+                die Form von Eiskappen, wurden im Dezember 2007 in Betrieb genommen.</p>
+            <b>Etappe 13</b> wartet mit einem weiteren Wanderhighlight auf: der </a> über den herrlichen
+            <a href="http://patscherkofelbahn.at/de/sommer/zirbenweg">Zirbenweg</a>, ein leichter Wanderweg, bietet fabelhafte Ausblicke auf das Inntal. Zum Aufstieg empfehlen wir
+            die flotte
+            <a href="http://patscherkofelbahn.at/#sommer">Patscherkofelbahn</a>- je nach Ausdauer kann man am Glungenzer den Sessellift nehmen oder zu Fuß absteigen.
+            </br>
+            <p>Bevor's losgeht schau dir unbedingt das Wetter an, um zu wissen, dass sich gerade keines der berüchtigten Innsbrucker Sommergewitter zusammenbraut.</p>
         </div>
         </br>
-</br>
-<div id="author">
-        <p>Autor: jemajo organization</p>
-        <!--<img src="images/autor.jpg" alt="Autor">-->
-    </div>
     </br>
+    <script type="text/javascript">document.write("<iframe id = \"widget\" width=\"600\" height=\"140\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/innsbruck/widget/w600/color-petrol?utm_source=widget&utm_medium=" + top.location.hostname + "&utm_content=" + top.location.href + "&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script>
+    <center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;">
+        <a href="http://www.wetter.at/wetter/oesterreich/tirol/innsbruck" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter in Innsbruck</a>
+        <br/></center>
+    <br />
+        <div id="mapdiv">
+        </div>
 
-</div>
+        <div id="author">
+            <p></p>
+        </div>
+        </br>
+
+    </div>
     <div id="footer">
         <hr>
         <h3>Impressum</h3>
         <h4>Autoren</h4>
-        <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> - 
-        <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> - 
+        <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> -
+        <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> -
         <a href="mailto:jessica.balling@student.uibk.ac.at">Jessica Balling</a>
     </div>
 </body>
