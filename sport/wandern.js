@@ -117,7 +117,7 @@ gpxTrack12.addTo(myMap);
 let gpxTrack13 = new L.GPX("AdlerwegEtappe13.gpx", {
     async: true,
     track_options: {
-        color: "#b40000"
+        color: "#b40000",
     }
 });
 
