@@ -153,15 +153,28 @@ gpxTrack13.on("addline", function (evt) {
 });
 gpxTrack13.addTo(myMap);
 
+// Gruppieren der Start- & Endpunkte & Tracks für die Anzeige in der Control
+let etappe12 = L.featureGroup(
+    [
+        etappeGroup12,
+        gpxTrack12,
+    ],
+);
+
+let etappe13 = L.featureGroup(
+    [
+        etappeGroup13,
+        gpxTrack13,
+    ],
+);
+
 let myMapControl = L.control.layers({
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
 },
     {
-        "Start- & Endpunkt der Etappe 12": etappeGroup12,
-        "Track der Etappe 12": gpxTrack12,
-        "Start- & Endpunkt der Etappe 13": etappeGroup13,
-        "Track der Etappe 13": gpxTrack13,
+        "Der Goetheweg - Etappe 12": etappe12,
+        "Der Zirbenweg - Etappe 13": etappe13,
     },
     {
         collapsed: false
