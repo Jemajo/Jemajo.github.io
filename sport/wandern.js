@@ -1,4 +1,3 @@
-// noch machen: Farbe von Linie auf diese Ändern:     color: "#b40000",
 let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
@@ -84,6 +83,49 @@ gpxTrack12.on("loaded", function (evt) {
 }).addTo(myMap);
 
 
+// Track Etappe 13
+let gpxTrack13 = new L.GPX("AdlerwegEtappe13.gpx", {
+    async: true,
+    track_options: {
+        color: "#b40000",
+    }
+});
+
+gpxTrack13.on("loaded", function (evt) {
+    let track = evt.target;
+}).addTo(myMap);
+
+// Gruppieren der Start- & Endpunkte & Tracks für die Anzeige in der Control
+let etappe12 = L.featureGroup(
+    [
+        etappeGroup12,
+        gpxTrack12,
+    ],
+);
+
+let etappe13 = L.featureGroup(
+    [
+        etappeGroup13,
+        gpxTrack13,
+    ],
+);
+
+// Kontrollbox anlegen
+let myMapControl = L.control.layers({
+    "Karte": myLayers.osm,
+    "Orthofoto": ortho_m_beschr,
+},
+    {
+        "Der Goetheweg - Etappe 12": etappe12,
+        "Der Zirbenweg - Etappe 13": etappe13,
+    },
+    {
+        collapsed: false
+    });
+
+myMap.addControl(myMapControl);
+
+// Höhenprofil-Plugin Etappe 12
 let hoehenProfil12 = L.control.elevation({
     position: "topright",
     theme: "steelblue-theme",
@@ -113,19 +155,15 @@ gpxTrack12.on("addline", function (evt) {
 });
 gpxTrack12.addTo(myMap);
 
-// Track Etappe 13
-let gpxTrack13 = new L.GPX("AdlerwegEtappe13.gpx", {
-    async: true,
-    track_options: {
-        color: "#b40000"
-    }
-});
-
-gpxTrack13.on("loaded", function (evt) {
-    let track = evt.target;
+L.control.scale({
+    maxWidth: 200,
+    metric: true,
+    imperial: false,
+    position: "bottomleft"
 }).addTo(myMap);
 
-let hoehenProfil = L.control.elevation({
+// Höhenprofil-Plugin Etappe 13
+let hoehenProfil13 = L.control.elevation({
     position: "topright",
     theme: "steelblue-theme",
     height: 125,
@@ -149,45 +187,9 @@ let hoehenProfil = L.control.elevation({
 }).addTo(myMap);
 
 gpxTrack13.on("addline", function (evt) {
-    hoehenProfil.addData(evt.line);
+    hoehenProfil13.addData(evt.line);
 });
 gpxTrack13.addTo(myMap);
-
-// Gruppieren der Start- & Endpunkte & Tracks für die Anzeige in der Control
-let etappe12 = L.featureGroup(
-    [
-        etappeGroup12,
-        gpxTrack12,
-    ],
-);
-
-let etappe13 = L.featureGroup(
-    [
-        etappeGroup13,
-        gpxTrack13,
-    ],
-);
-
-let myMapControl = L.control.layers({
-    "Karte": myLayers.osm,
-    "Orthofoto": ortho_m_beschr,
-},
-    {
-        "Der Goetheweg - Etappe 12": etappe12,
-        "Der Zirbenweg - Etappe 13": etappe13,
-    },
-    {
-        collapsed: false
-    });
-
-myMap.addControl(myMapControl);
-
-L.control.scale({
-    maxWidth: 200,
-    metric: true,
-    imperial: false,
-    position: "bottomleft"
-}).addTo(myMap);
 
 // Variablen Gruppieren für fitBounds
 let etappeGroups = L.featureGroup(
@@ -197,5 +199,6 @@ let etappeGroups = L.featureGroup(
     ],
 );
 
+// Fit Bounds
 myMap.fitBounds(etappeGroups.getBounds());
 
