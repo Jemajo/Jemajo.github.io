@@ -59,6 +59,8 @@ body{
     color: #0193B7;
     background-image: url("images/transport.jpg");
     font-family: 'Cookie', cursive;
+    background-position-x: center;
+    background-position-y: 45%;
 }
 
 #headeressen {
