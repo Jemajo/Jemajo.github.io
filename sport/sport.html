@@ -12,8 +12,18 @@
     <link rel="stylesheet" href="../js/leaflet/leaflet.css" />
     <script src="../js/leaflet/leaflet.js"></script>
 
-<!-- Google Font Cookie -->
-<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Font Cookie -->
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
 
     <title>Enjoy Innsbruck - Sport</title>
 </head>
@@ -45,17 +55,25 @@
     </div>
     </br>
     <div class="article">
-       <p> An sportlichen Aktivitäten findest du auf dieser Seite 2 Abschnitte auf dem Adlerweg zum wandern und die nächsten Kletterspots rund um Innsbruck. 
-    </br>
-    Hier findest du auch noch andere sportliche Aktivitäten: 
-    <ul>
-        <li><a href="https://www.alpenvereinaktiv.com/de/"> Tourenplanung: Alpenverein Aktiv  </a></li>
-        <li><a href="https://www.bikecity-innsbruck.com/"> Mountainbiken </a></li>
-        <li><a href="https://www.innsbruck.info/erleben/sommersport/wassersport.html"> Rund um's Wasser </a></li>
-    </ul>
+        <p> An sportlichen Aktivitäten findest du auf dieser Seite 2 Abschnitte auf dem Adlerweg zum wandern und die nächsten
+            Kletterspots rund um Innsbruck.
+            </br>
+            </br>
+            Hier findest du auch noch andere sportliche Aktivitäten:
+            <ul>
+                <li>
+                    <a href="https://www.alpenvereinaktiv.com/de/"> Tourenplanung: Alpenverein Aktiv </a>
+                </li>
+                <li>
+                    <a href="https://www.bikecity-innsbruck.com/"> Mountainbiken </a>
+                </li>
+                <li>
+                    <a href="https://www.innsbruck.info/erleben/sommersport/wassersport.html"> Rund um's Wasser </a>
+                </li>
+            </ul>
 
-</p>
-       <!-- <div id="mapdiv">
+        </p>
+        <!-- <div id="mapdiv">
 
         </div> 
         </br>
@@ -68,20 +86,58 @@
     -->
 
 
-        </br>
-        <div id="text">
-            <p></p>
+        <div class="col d-flex justify-content-center">
+            <div class="card">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/klettern.jpg" alt="Bild Klettern">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="sport/klettern.html"> Klettern </a>
+                            </h5>
+                            <p class="card-text">Hier direkt die nächsten Kletterspots rund um Innsbruck auschecken.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Climb now. Work later.</small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="../images/wandern.jpg" alt="Bild Kultur">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="kultur/kultur.html">Wandern</a>
+                            </h5>
+                            <p class="card-text">Hier findest du zwei Abschnitte des Adlerweges direkt bei Innsbruck.</p>
+                            <p class="card-text">
+                                <small class="text-muted"> </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="../images/wetter.jpg.jpg" alt="Scheune und Blitz">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="https://www.zamg.ac.at/cms/de/wetter/wetter-oesterreich/tirol/trend2"> Wetterprognose </a>
+                            </h5>
+                            <p class="card-text"> Die Zentralanstalt für Meteorologie und Geodynamik hat den aktuellen Wetterbericht für dich.
+                                </p>
+                            <p class="card-text">
+                                <small class="text-muted">Bei Quellwolken? Runter vom Berg!</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
-
-
-    </div>
-    <hr>
-    <div id="footer">
-      <h2>Autoren</h2>
-      <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> -
-      <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> -
-      <a href="mailto:jessica.balling@student.uibk.ac.at">Jessica Balling</a>
-    </div>
+        </br>
+            <hr>
+            <div id="footer">
+                <h2>Autoren</h2>
+                <a href="mailto:jacob.heuser@student.uibk.ac.at">Jacob Heuser</a> -
+                <a href="mailto:marlene.weiss@student.uibk.ac.at">Marlene Weiß</a> -
+                <a href="mailto:jessica.balling@student.uibk.ac.at">Jessica Balling</a>
+            </div>
 </body>
 
 </html>
