@@ -79,7 +79,6 @@ body{
     height: 500px;
     padding: 30px;
     text-align: bottom;
-    font-size: 3.0em; 
     color:#D1C5B7;
     background-image: url("images/sport.jpg");
     font-family: 'Cookie', cursive;
@@ -87,6 +86,9 @@ body{
     background-position-y: 45%;
 }
 
+#headersport h1 {
+    font-size: 96px;
+}
 #headerwandern {
     height: 500px;
     padding: 30px;
