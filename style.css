@@ -28,6 +28,7 @@ body{
     font-family: 'Cookie', cursive;
     background-position-x: center;
     background-position-y: 26%;
+    padding-top: inherit;
 }
 
 #headeraccommodation {

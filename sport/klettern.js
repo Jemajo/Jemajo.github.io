@@ -17,13 +17,6 @@ let myLayers = {
 
         }
     ),
-
-    bmapoverlay: L.tileLayer(
-        "https://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png", {
-            subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-            attribution: "Datenquelle: <a href='https://www.basemap.at'>basemap.at</a>"
-        }
-    ),
     tiris_nomenklatur: L.tileLayer(
         "http://wmts.kartetirol.at/wmts/gdi_nomenklatur/GoogleMapsCompatible/{z}/{x}/{y}.png8", {
             attribution: "<a href='https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol'>eKarte Tirol</a>",
@@ -45,11 +38,9 @@ let ortho_m_beschr = L.featureGroup(
 );
 
 
-// Layer zur Karte hinzufügen - zusammenbauen 
 myMap.addLayer(myLayers.osm);
 
 let myMapControl = L.control.layers({
-    //<Object> baselayers?
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
 
@@ -60,8 +51,6 @@ let myMapControl = L.control.layers({
     collapsed: false,
 });
 myMap.addControl(myMapControl);
-// Zentrum der Karte setzen 
-myMap.setView([47.267, 11.383], 11)
 L.control.scale({
     maxWidth: 200,
     metric: true,
@@ -75,7 +64,7 @@ for (const ks of kletterspots) {
     L.marker([ks.lat, ks.lng], {
         icon: myIcon,
     }).bindPopup(`<h1>${ks.name}</h1>
-        <p>${ks.topolink}</br>${ks.Infos}</p>`).addTo(climbingLayer);
+        <p>${ks.topolink} </br></br> Neben dem Topo findest du mehr Informationen findest du im unten stehenden im Text. </p>`).addTo(climbingLayer);
 }
 myMap.fitBounds(climbingLayer.getBounds());
 
