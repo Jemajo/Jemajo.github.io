@@ -64,7 +64,7 @@ for (const ks of kletterspots) {
     L.marker([ks.lat, ks.lng], {
         icon: myIcon,
     }).bindPopup(`<h1>${ks.name}</h1>
-        <p>${ks.topolink}</br>${ks.Infos}</p>`).addTo(climbingLayer);
+        <p>${ks.topolink} </br></br> Neben dem Topo findest du mehr Informationen findest du im unten stehenden im Text. </p>`).addTo(climbingLayer);
 }
 myMap.fitBounds(climbingLayer.getBounds());
 
