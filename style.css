@@ -28,7 +28,6 @@ body{
     font-family: 'Cookie', cursive;
     background-position-x: center;
     background-position-y: 26%;
-    padding-top: inherit;
 }
 
 #headeraccommodation {
@@ -128,36 +127,8 @@ body{
 #topnav a:hover{
     background-color:#0193B7;
     color:#D1C5B7;
-}/*
-#topnav ul li:hover ul{
-    display: block;
-}
-#topnav ul{
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
-    position: relative;
-}
-#topnav li{
-    position: relative;
-    float: left;
-    list-style-type: none;
-}
-#topnav ul:after{
-    content: ".";
-    display: block;
-    height: 0px;
-    clear: both;
-    visibility: hidden;
 }
 
-/*#topnav ul ul{
-    position: absolute;
-    display: none;
-    left: 0px;
-    width: 0px;
-    margin-top: auto;
-}*/
 .dropbutton{
     background-color: #D1C5B7;
     color: #063E53;
