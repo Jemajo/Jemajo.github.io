@@ -17,7 +17,6 @@ let myLayers = {
             attribution: "Datenquelle: <a href='https://www.openstreetmap.org'>openstreetmap.org</a>"
         }
     ),
-
     bmapoverlay: L.tileLayer(
         "https://{s}.wien.gv.at/basemap/bmapoverlay/normal/google3857/{z}/{y}/{x}.png",
         {
@@ -46,6 +45,14 @@ let ortho_m_beschr = L.featureGroup(
     [myLayers.bmaporthofoto30cm,
     myLayers.tiris_nomenklatur]
 );
+
+// Maßstabsleiste einbinden
+L.control.scale({
+    maxWidth: 200,
+    metric: true,
+    imperial: false,
+    position: "bottomleft"
+}).addTo(myMap);
 
 //Marker-Layer Etappe 12
 myMap.addLayer(etappeGroup12);
@@ -154,13 +161,6 @@ gpxTrack12.on("addline", function (evt) {
     hoehenProfil12.addData(evt.line);
 });
 gpxTrack12.addTo(myMap);
-
-L.control.scale({
-    maxWidth: 200,
-    metric: true,
-    imperial: false,
-    position: "bottomleft"
-}).addTo(myMap);
 
 // Höhenprofil-Plugin Etappe 13
 let hoehenProfil13 = L.control.elevation({
