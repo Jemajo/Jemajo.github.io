@@ -1,5 +1,5 @@
 // Rahmen für die Karte 
-let myMap = L.map("mapclimbing", {
+let myMap = L.map("mapdiv", {
     fullscreenControl: true,
     fullscreenControlOptions: {
         position: 'topleft'
