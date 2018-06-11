@@ -71,6 +71,6 @@ for (const es of eatdaten) {
     L.marker([es.lat, es.lng], {
         icon: myIcon,
     }).bindPopup(`<h1>${es.name}</h1>
-    <p>${es.Art}</p></br><p>${es.Internetseite}</p></br><p>${es.Öffnungszeiten}</p></br><p>${es.Infos}</p>`).addTo(eatingspot);
+    <p>${es.Art}</br>${es.Internetseite}</br>${es.Öffnungszeiten}</br>${es.Infos}</p>`).addTo(eatingspot);
 }
 myMap.fitBounds(eatingspot.getBounds());
