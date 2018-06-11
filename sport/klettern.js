@@ -38,11 +38,9 @@ let ortho_m_beschr = L.featureGroup(
 );
 
 
-// Layer zur Karte hinzufügen - zusammenbauen 
 myMap.addLayer(myLayers.osm);
 
 let myMapControl = L.control.layers({
-    //<Object> baselayers?
     "Karte": myLayers.osm,
     "Orthofoto": ortho_m_beschr,
 
@@ -53,8 +51,6 @@ let myMapControl = L.control.layers({
     collapsed: false,
 });
 myMap.addControl(myMapControl);
-// Zentrum der Karte setzen 
-myMap.setView([47.267, 11.383], 11)
 L.control.scale({
     maxWidth: 200,
     metric: true,
