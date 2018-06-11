@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!--Bootstraps-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
- <!-- Icon -->
- <link rel="shortcut icon" href="icons/steinbock.png" type="image/png" />
- <link rel="icon" href="icons/steinbock.png" type="image/png" />
-    <link rel="stylesheet" href="quiz.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Bootstraps-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Icon -->
+  <link rel="shortcut icon" href="icons/steinbock.png" type="image/png" />
+  <link rel="icon" href="icons/steinbock.png" type="image/png" />
 
 
-    <link rel="stylesheet" href="js\leaflet\leaflet.css"/>
-    <script src="js\leaflet\leaflet.js"></script>
+  <link rel="stylesheet" href="quiz.css" />
 
+  <link rel="stylesheet" href="js\leaflet\leaflet.css" />
+  <script src="js\leaflet\leaflet.js"></script>
+  <script defer src="quiz.js"></script>
 
-    <script defer src="quiz.js"></script>
-
-
-
-    <title>Enjoy Innsbruck</title>
+  <title>Enjoy Innsbruck</title>
 </head>
+
 <body>
   <div class="card mb-3">
     <img class="card-img-top" src="./images/ibk.jpg" alt="Bild von Innsbruck">
     <div class="card-body">
-      <h5 class="card-title">Dein Innsbruck </h5>
-      <p class="card-text">Wie gut kennst du dich schon aus? Bei der richtigen Antwort geht es gleich weiter auf unsere Seite.</p>
-      <div class="quiz"></p><form><input type=button value="Quiz!" onClick="LogIn()"></form></div>
-      <p class="card-text"><small class="text-muted">Kein Plan? Dann geht's <a href="frontpage.html">hier </a>weiter.</small></p>
+      <h5 class="card-title">Willkommen in Innsbruck </h5>
+      <p class="card-text">Kennst du den Tiroler Wortschatz schon gut? Teste es bei einem Quiz. Bei der richtigen Antwort geht's weiter auf unsere Seite.</p>
+      <div class="quiz">
+        </p>
+        <form>
+          <input type=button value="Quiz!" onClick="LogIn()">
+        </form>
+      </div>
+      <p class="card-text">
+        <small class="text-muted"></br> Noch keinen Plan? Dann geht's
+          <a href="frontpage.html">hier </a>weiter.</small>
+      </p>
     </div>
   </div>
-    
+
 
 </body>
 
