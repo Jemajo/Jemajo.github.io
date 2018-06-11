@@ -53,7 +53,7 @@ let myMapControl = L.control.layers({
     "Orthofoto": ortho_m_beschr,
 },
     {
-        "Transportpunkte": reiseLayer,
+        "Fernferkehr": reiseLayer,
     },
     {
         collapsed: false
