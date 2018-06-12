@@ -67,12 +67,12 @@ L.control.scale({
 
 myMap.addLayer(reiseLayer);
 
-for (let macc of reise) {
-    L.marker([macc.lat, macc.lng], {
+for (let mreise of reise) {
+    L.marker([mreise.lat, mreise.lng], {
         icon: myIcon,
     }
-    ).bindPopup(`<h1>${macc.name}</h1>
-        <p> ${macc.what} </br> </br> ${macc.adresse}</p>`)
+    ).bindPopup(`<h1>${mreise.name}</h1>
+        <p> ${mreise.what} </br> </br> ${mreise.adresse}</p>`)
         .addTo(reiseLayer);
 }
 myMap.fitBounds(reiseLayer.getBounds());

@@ -66,12 +66,12 @@ L.control.scale({
 
 myMap.addLayer(kulturLayer);
 
-for (let macc of pois) {
-    L.marker([macc.lat, macc.lng], {
+for (let mkult of pois) {
+    L.marker([mkult.lat, mkult.lng], {
         icon: myIcon,
     }
-    ).bindPopup(`<h1>${macc.name}</h1>
-        <p> Was ist das? </br> ${macc.what} </br> </br> ${macc.adresse}</p>`)
+    ).bindPopup(`<h1>${mkult.name}</h1>
+        <p> Was ist das? </br> ${mkult.what} </br> </br> ${mkult.adresse}</p>`)
         .addTo(kulturLayer);
 }
 myMap.fitBounds(kulturLayer.getBounds());
